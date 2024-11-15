@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --highlight-color: #000;
+  --text-color: #fff;
+  --background-color: #303030;
+  --price-color: #3d3d3d;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+/* navigation bar */
+.nav {
+  position: fixed;
+  background: var(--highlight-color);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav a:hover {
+  color: var(--highlight-color);
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* blurred image with text */
+.title {
+  padding-top: 100px;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: var(--background-color);
+}
+
+#background-img {
+  width: 100%;
+  height: 300px;
+  filter: blur(7px);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+section {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+/* features section */
+#features {
+  text-align: center;
+  line-height: 3rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.disclaimer {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+li {
+  padding: 30px;
+  font-size: 2rem;
+  list-style: none;
+}
+
+/* video section */
+#demonstration {
+  text-align: center;
+  padding: 50px;
+}
+
+iframe {
+  border: 3px solid white;
+}
+
+/* pricing section */
+#pricing {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 10px;
+}
+
+.prices {
+  background: var(--price-color);
+  border-radius: 10px;
+  padding: 0px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+
+/* form section */
+#form-section {
+  text-align: center;
+  line-height: 1rem;
+}
+
+label, input {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+/* media query */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    header {
+        font-size: 18px;
+    }
+}
